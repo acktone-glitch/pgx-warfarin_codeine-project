@@ -1,0 +1,12 @@
+	Genotype	Phenotype	Haplotype1	Haplotype2	AlternativePhase	VariantData	CNV
+HG02651	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+HG02691	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+HG03603	*1/*38	Normal Metabolizer	*38;	*1;	;	*1:10-94842866-A-G:0.488;*38:default;	
+HG03619	*1/*38	Normal Metabolizer	*1;	*38;	;	*1:10-94842866-A-G:0.469;*38:default;	
+HG03672	*1/*2	Intermediate Metabolizer	*1;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:0.523,0.456;*1:10-94842866-A-G:1.0;	
+HG03723	*2/*2	Poor Metabolizer	*2;*1;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:0.99,1.0;*1:10-94842866-A-G:1.0;	
+HG03790	*2/*2	Poor Metabolizer	*2;*1;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:1.0,0.996;*1:10-94842866-A-G:0.993;	
+HG03814	*1/*2	Intermediate Metabolizer	*2;*1;	*1;	;	*2:10-94781859-G-A,10-94775367-A-G:0.625,0.476;*1:10-94842866-A-G:1.0;	
+NA20864	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+NA20900	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+NA21092	*2/*38	Intermediate Metabolizer	*38;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:0.542,0.54;*1:10-94842866-A-G:0.553;*38:default;	

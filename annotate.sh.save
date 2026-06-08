@@ -1,0 +1,105 @@
+#!/bin/bash
+#SBATCH --job-name=vep_genes
+#SBATCH --output=logs/vep_genes_%A.out
+#SBATCH --error=logs/vep_genes_%A.err
+#SBATCH --cpus-per-task=15
+#SBATCH --mem=64G
+
+set -u#!/bin/bash
+#SBATCH --job-name=vep_genes
+#SBATCH --output=logs/vep_genes_%A.out
+#SBATCH --error=logs/vep_genes_%A.err
+#SBATCH --cpus-per-task=15
+#SBATCH --mem=64G
+
+set -euo pipefail
+
+# Absolute paths to cache and plugins
+CACHE_DIR=/etc/ace-data/home/rnagaba/reset/.vep/cache
+PLUGIN_DIR=/etc/ace-data/home/rnagaba/reset/.vep/plugins
+CLINVAR_VCF=$CACHE_DIR/clinvar/clinvar.vcf.gz
+DBNSFP=$CACHE_DIR/dbNSFP/dbNSFP5.3.1a_grch38.gz
+
+# Find all gene-level VCFs under drug folders (codeine, warfarin, etc.)
+VCF_LIST=$(find /etc/ace-data/home/rnagaba/variants -type f -path "*/codeine/*/*.vcf.gz" -o -path "*/warfarin/*/*.vcf.gz")
+
+# Loop through each gene VCF
+for INPUT_VCF in $VCF_LIST; do
+    if [ ! -s "$INPUT_VCF" ]; then
+        echo "Skipping empty or missing file: $INPUT_VCF"
+        continue
+    fi
+
+    OUTPUT_VCF=${INPUT_VCF%.vcf.gz}.vep.vcf.gz
+    LOG_FILE=${INPUT_VCF%.vcf.gz}.vep.log
+    SUMMARY_HTML=${INPUT_VCF%.vcf.gz}.summary.html
+
+    echo "=== Running VEP on $INPUT_VCF ==="
+
+    vep \
+       --cache \
+       --offline \
+       --dir_cache $CACHE_DIR \
+       --dir_plugins $PLUGIN_DIR \
+       --species homo_sapiens \
+       --assembly GRCh38 \
+       --vcf \
+       --input_file $INPUT_VCF \
+       --output_file $OUTPUT_VCF \
+       --force_overwrite \
+       --plugin LoFtool \
+       --plugin dbNSFP,$DBNSFP,ALL \
+       --custom $CLINVAR_VCF,ClinVar,vcf,exact,0,CLNSIG \
+       --fork 4 \
+       --stats_file $SUMMARY_HTML \
+       2>&1 | tee $LOG_FILE || echo "Error in $INPUT_VCF, see $LOG_FILE"
+
+    echo "=== Finished $INPUT_VCF → $OUTPUT_VCF ==="
+done
+
+echo "All gene-level VEP runs complete."
+
+# Absolute paths to cache and plugins
+CACHE_DIR=/etc/ace-data/home/rnagaba/reset/.vep/cache
+PLUGIN_DIR=/etc/ace-data/home/rnagaba/reset/.vep/plugins
+CLINVAR_VCF=$CACHE_DIR/clinvar/clinvar.vcf.gz
+DBNSFP=$CACHE_DIR/dbNSFP/dbNSFP5.3.1a_grch38.gz
+
+# Find all gene-level VCFs under drug folders (codeine, warfarin, etc.)
+VCF_LIST=$(find /etc/ace-data/home/rnagaba/variants -type f -path "*/codeine/*/*.vcf.gz" -o -path "*/warfarin/*/*.vcf.gz")
+
+# Loop through each gene VCF
+for INPUT_VCF in $VCF_LIST; do
+    if [ -z "$INPUT_VCF" ]; then
+        echo "No gene VCFs found, skipping."
+        continue
+    fi
+
+    OUTPUT_VCF=${INPUT_VCF%.vcf.gz}.vep.vcf.gz
+    LOG_FILE=${INPUT_VCF%.vcf.gz}.vep.log
+    SUMMARY_HTML=${INPUT_VCF%.vcf.gz}.summary.html
+
+    echo "=== Running VEP on $INPUT_VCF ==="
+
+    vep \
+       --cache \
+       --offline \
+       --dir_cache $CACHE_DIR \
+       --dir_plugins $PLUGIN_DIR \
+       --species homo_sapiens \
+       --assembly GRCh38 \
+       --vcf \
+       --input_file $INPUT_VCF \
+       --output_file $OUTPUT_VCF \
+       --force_overwrite \
+       --plugin LoFtool \
+       --plugin dbNSFP,$DBNSFP,ALL \
+       --custom $CLINVAR_VCF,ClinVar,vcf,exact,0,CLNSIG \
+       --fork 4 \
+       --stats_file $SUMMARY_HTML \
+       2>&1 | tee $LOG_FILE || echo "Error in $INPUT_VCF, see $LOG_FILE"
+
+    echo "=== Finished $INPUT_VCF → $OUTPUT_VCF ==="
+done
+
+echo "All gene-level VEP runs complete."

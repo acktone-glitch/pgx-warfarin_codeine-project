@@ -1,0 +1,196 @@
+# =============================================================================
+#  .gitignore — PGx WES Pipeline
+#  Covers: raw sequencing data, reference databases, VEP cache, PyPGx bundle,
+#          GATK intermediates, R outputs, SLURM logs, Windows/system files
+# =============================================================================
+
+# ── RAW SEQUENCING DATA ───────────────────────────────────────────────────────
+*.fastq
+*.fastq.gz
+*.fq
+*.fq.gz
+*.bam
+*.bam.bai
+*.cram
+*.cram.crai
+*.sra
+
+# ── VCF FILES (too large / raw data) ─────────────────────────────────────────
+*.vcf
+*.vcf.gz
+*.vcf.gz.tbi
+*.vcf.gz.csi
+*.gvcf
+*.gvcf.gz
+*.gvcf.gz.tbi
+*.bcf
+*.bcf.csi
+
+# ── REFERENCE GENOME ─────────────────────────────────────────────────────────
+*.fa
+*.fasta
+*.fa.gz
+*.fasta.gz
+*.fa.fai
+*.fasta.fai
+*.fa.amb
+*.fa.ann
+*.fa.bwt
+*.fa.pac
+*.fa.sa
+*.dict
+
+# ── VEP CACHE AND DATABASES ───────────────────────────────────────────────────
+.vep/
+vep_cache/
+vep_plugins/
+*_cache/
+homo_sapiens/
+# dbNSFP
+dbNSFP*.gz
+dbNSFP*.gz.tbi
+dbNSFP*.gz.md5
+# ClinVar
+clinvar.vcf.gz
+clinvar.vcf.gz.tbi
+# CADD
+CADD*.tsv.gz
+CADD*.tsv.gz.tbi
+# SpliceAI
+spliceai_*.vcf.gz
+spliceai_*.vcf.gz.tbi
+# LoFtool
+LoFtool_scores.txt
+
+# ── PYPGX BUNDLE ─────────────────────────────────────────────────────────────
+pypgx-bundle/
+*pypgx-bundle*/
+
+# ── BEAGLE PHASING PANEL ─────────────────────────────────────────────────────
+*.bref3
+beagle*.jar
+
+# ── GATK INTERMEDIATES ───────────────────────────────────────────────────────
+# GenomicsDB workspaces
+genomicsdb/
+*_genomicsdb/
+# Temporary GATK files
+*.tmp
+*.tmp.vcf
+*.tmp.vcf.gz
+# Interval lists
+*.interval_list
+# Metrics
+*.metrics
+*.grp
+# Index files
+*.tbi
+*.csi
+*.idx
+
+# ── SLURM LOGS ───────────────────────────────────────────────────────────────
+logs/
+*.out
+*.err
+slurm-*.out
+slurm-*.err
+*.log
+
+# ── FASTP OUTPUT ─────────────────────────────────────────────────────────────
+*_fastp.json
+*_fastp.html
+fastp.json
+fastp.html
+
+# ── LARGE RESULTS FILES (keep summary CSVs, exclude master tables) ────────────
+results/master_gatk_all.csv
+results/master_all_v2.csv
+results/pypgx_analysis/pypgx_all_results.csv
+results/*/isec/
+results/comparison/*/isec/
+# Zip archives from PyPGx
+*.zip
+
+# ── R TEMPORARY FILES ────────────────────────────────────────────────────────
+.Rhistory
+.RData
+.Rproj.user/
+*.Rproj
+Rplots.pdf
+
+# ── PYTHON / CONDA ───────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+.conda/
+conda-meta/
+*.egg-info/
+.ipynb_checkpoints/
+
+# ── COMPRESSED ARCHIVES ──────────────────────────────────────────────────────
+*.tar
+*.tar.gz
+*.tar.bz2
+*.tar.xz
+*.gz
+*.bz2
+*.xz
+*.7z
+*.rar
+# Exception: keep compressed results summary if small
+!results/*.csv.gz
+
+# ── JAVA / GATK ──────────────────────────────────────────────────────────────
+*.jar
+*.class
+
+# ── WINDOWS SYSTEM FILES ─────────────────────────────────────────────────────
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+*.url
+
+# ── MACOS (if you ever work on a Mac) ────────────────────────────────────────
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# ── LINUX / HPC ──────────────────────────────────────────────────────────────
+*~
+.nfs*
+.bash_history
+core.*
+
+# ── EDITORS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+
+# ── WHAT TO KEEP (explicit exceptions) ───────────────────────────────────────
+# Keep small summary CSVs in results/
+!results/master_gatk_pass.csv
+!results/diplotype_frequencies.csv
+!results/phenotype_pct_wide.csv
+!results/phenotype_counts.csv
+!results/star_allele_frequencies_pypgx.csv
+!results/cohort_reference_correlations.csv
+!results/summary_by_gene_pop.csv
+!results/clinvar_all_variants.csv
+!results/drug_response_variants.csv
+
+# Keep all PNGs and PDFs in docs/
+!docs/figures/*.png
+!docs/figures/*.pdf
+
+# Keep all scripts
+!pipeline/*.sh
+!analysis/*.R
+!config/*.bed

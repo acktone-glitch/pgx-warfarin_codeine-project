@@ -1,0 +1,6 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG00256	male	SAME123048	GBR	British	EUR	European Ancestry	GBR	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00122	female	SAME122876	GBR	British	EUR	European Ancestry	GBR	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00146	female	SAME124390	GBR	British	EUR	European Ancestry	GBR	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,MAGE RNA-seq,Human Pangenome Reference Consortium, Phase 2,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00099	female	SAME123271	GBR	British	EUR	European Ancestry	GBR	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,Human Pangenome Reference Consortium, Phase 2,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00245	female	SAME123218	GBR	British	EUR	European Ancestry	GBR	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis

@@ -1,0 +1,3 @@
+HG01501	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR701/SRR701470/SRR701470_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR701/SRR701470/SRR701470_2.fastq.gz
+HG01503	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR709/SRR709962/SRR709962_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR709/SRR709962/SRR709962_2.fastq.gz
+HG01504	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR710/SRR710112/SRR710112_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR710/SRR710112/SRR710112_2.fastq.gz

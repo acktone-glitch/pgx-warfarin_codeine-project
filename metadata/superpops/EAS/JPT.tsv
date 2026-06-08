@@ -1,0 +1,4 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+NA19075	male	SAME122816	JPT	Japanese	EAS	East Asian Ancestry	JPT	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release
+NA18993	female	SAME124894	JPT	Japanese	EAS	East Asian Ancestry	JPT	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release
+NA18957	female	SAME124109	JPT	Japanese	EAS	East Asian Ancestry	JPT	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release

@@ -1,0 +1,3 @@
+NA20503	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR766/SRR766036/SRR766036_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR766/SRR766036/SRR766036_2.fastq.gz
+NA20511	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR250/ERR250978/ERR250978_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR250/ERR250978/ERR250978_2.fastq.gz
+NA20507	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR748/SRR748292/SRR748292_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR748/SRR748292/SRR748292_2.fastq.gz

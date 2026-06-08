@@ -1,0 +1,13 @@
+	Genotype	Phenotype	Haplotype1	Haplotype2	AlternativePhase	VariantData	CNV
+HG00407	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+HG00699	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:0.993;	
+HG00956	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+HG01596	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:nan;	
+HG02085	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+HG02372	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+NA18526	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+NA18530	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:1.0;	
+NA18645	*1/*38	Normal Metabolizer	*1;	*38;	;	*1:10-94842866-A-G:0.432;*38:default;	
+NA18946	*1/*1	Normal Metabolizer	*1;	*1;	;	*1:10-94842866-A-G:nan;	
+NA18993	*2/*3	Poor Metabolizer	*3;*1;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:0.44,0.57;*3:10-94780653-G-A:0.483;*1:10-94842866-A-G:1.0;	
+NA19001	*2/*2	Poor Metabolizer	*2;*1;	*2;*1;	;	*2:10-94781859-G-A,10-94775367-A-G:nan,nan;*1:10-94842866-A-G:nan;	

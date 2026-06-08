@@ -1,0 +1,1 @@
+HG00407	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR031/ERR031987/ERR031987_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR031/ERR031987/ERR031987_2.fastq.gz

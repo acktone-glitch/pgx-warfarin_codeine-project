@@ -1,0 +1,6 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG01522	female	SAME125321	IBS	Iberian	EUR	European Ancestry	IBS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release
+HG01536	male	SAME125135	IBS	Iberian	EUR	European Ancestry	IBS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG01770	female	SAME124638	IBS	Iberian	EUR	European Ancestry	IBS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG01710	female	SAME123084	IBS	Iberian	EUR	European Ancestry	IBS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG01786	female	SAME1839312	IBS	Iberian	EUR	European Ancestry	IBS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,Human Pangenome Reference Consortium, Phase 2,1000 Genomes phase 3 release

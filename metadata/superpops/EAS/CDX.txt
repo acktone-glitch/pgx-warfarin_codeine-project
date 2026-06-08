@@ -1,0 +1,1 @@
+HG00956	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR050/ERR050740/ERR050740_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR050/ERR050740/ERR050740_2.fastq.gz

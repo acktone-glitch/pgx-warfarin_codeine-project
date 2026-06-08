@@ -1,0 +1,1 @@
+NA18530	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR034/ERR034576/ERR034576_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR034/ERR034576/ERR034576_2.fastq.gz

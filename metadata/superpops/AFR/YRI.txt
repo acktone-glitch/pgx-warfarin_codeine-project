@@ -1,0 +1,4 @@
+NA18488	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100014/SRR100014_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100014/SRR100014_2.fastq.gz
+NA18498	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100024/SRR100024_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100024/SRR100024_2.fastq.gz
+NA18499	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100023/SRR100023_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100023/SRR100023_2.fastq.gz
+NA18870	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100031/SRR100031_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR100/SRR100031/SRR100031_2.fastq.gz

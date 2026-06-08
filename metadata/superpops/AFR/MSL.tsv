@@ -1,0 +1,8 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG03437	female	SAME1840123	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release
+HG03558	female	SAME1839561	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG03446	female	SAME1839911	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG03436	male	SAME1840120	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG03076	female	SAME1839038	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release
+HG03572	female	SAME1839463	MSL	Mende	AFR	African Ancestry	MSL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG03078	male	SAME1839047	MSL	Mende,Mende	AFR	African Ancestry,Africa (SGDP)	MSL,MendeSGDP	1000 Genomes on GRCh38,Simons Genome Diversity Project,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release

@@ -1,0 +1,3 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG00674	male	SAME1840080	CHS	Southern Han Chinese	EAS	East Asian Ancestry	CHS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG00699	female	SAME123165	CHS	Southern Han Chinese	EAS	East Asian Ancestry	CHS	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,90 Han Chinese high coverage genomes

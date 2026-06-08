@@ -1,0 +1,26 @@
+	Genotype	Phenotype	Haplotype1	Haplotype2	AlternativePhase	VariantData	CNV
+HG00097	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+HG00105	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.488;	
+HG00106	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.524;	
+HG00125	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.519;	
+HG00145	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+HG00171	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+HG00173	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.613;	
+HG00313	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.482;	
+HG00324	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.431;	
+HG00376	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+HG01501	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.354;	
+HG01503	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+HG01504	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+HG01522	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.483;	
+HG01770	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.488;	
+NA06989	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+NA11840	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.577;	
+NA12046	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.512;	
+NA12234	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.468;	
+NA12347	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+NA20503	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.508;	
+NA20506	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.56;	
+NA20507	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+NA20511	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.574;	
+NA20761	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	

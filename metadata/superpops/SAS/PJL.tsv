@@ -1,0 +1,4 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG03490	male	SAME1839259	PJL	Punjabi	SAS	South Asian Ancestry	PJL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG03619	female	SAME1840064	PJL	Punjabi	SAS	South Asian Ancestry	PJL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG02601	female	SAME1840293	PJL	Punjabi	SAS	South Asian Ancestry	PJL	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release

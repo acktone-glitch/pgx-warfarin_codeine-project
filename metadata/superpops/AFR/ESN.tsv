@@ -1,0 +1,8 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG03135	female	SAME1839385	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG03303	female	SAME1839485	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release
+HG03363	female	SAME1839957	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG03105	female	SAME1840041	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,MAGE RNA-seq,1000 Genomes phase 3 release
+HG03195	female	SAME1839919	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,Human Pangenome Reference Consortium, Phase 2,1000 Genomes phase 3 release
+HG02973	male	SAME1840246	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG03123	female	SAME1839663	ESN	Esan	AFR	African Ancestry	ESN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release

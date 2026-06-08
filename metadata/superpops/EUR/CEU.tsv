@@ -1,0 +1,6 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+NA12347	male	SAME125316	CEU	CEPH	EUR	European Ancestry	CEU	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA12046	female	SAME123213	CEU	CEPH	EUR	European Ancestry	CEU	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release
+NA11930	male	SAME125095	CEU	CEPH	EUR	European Ancestry	CEU	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA12234	female	SAME124003	CEU	CEPH	EUR	European Ancestry	CEU	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA11840	female	SAME125139	CEU	CEPH	EUR	European Ancestry	CEU	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis

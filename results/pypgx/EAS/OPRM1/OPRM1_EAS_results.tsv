@@ -1,0 +1,13 @@
+	Genotype	Phenotype	Haplotype1	Haplotype2	AlternativePhase	VariantData	CNV
+HG00407	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+HG00699	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+HG00956	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+HG01596	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+HG02085	Reference/rs1799971	Indeterminate	Reference;	rs1799971;	;	rs1799971:6-154039662-A-G:0.66;Reference:default;	
+HG02372	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+NA18526	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+NA18530	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+NA18645	Reference/rs1799971	Indeterminate	rs1799971;	Reference;	;	rs1799971:6-154039662-A-G:0.484;Reference:default;	
+NA18946	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+NA18993	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	
+NA19001	Reference/Reference	Indeterminate	Reference;	Reference;	;	Reference:default;	

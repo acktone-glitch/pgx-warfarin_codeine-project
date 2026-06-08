@@ -1,0 +1,2 @@
+HG00171	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR034/ERR034564/ERR034564_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR034/ERR034564/ERR034564_2.fastq.gz
+HG00173	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR764/SRR764756/SRR764756_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/SRR764/SRR764756/SRR764756_2.fastq.gz

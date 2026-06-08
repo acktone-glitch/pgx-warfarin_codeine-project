@@ -1,0 +1,11 @@
+/etc/ace-data/home/rnagaba/reset/data/SAS/BEB/HG03603/aligned/HG03603.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/BEB/HG03814/aligned/HG03814.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/GIH/NA20864/aligned/NA20864.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/GIH/NA20900/aligned/NA20900.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/GIH/NA21092/aligned/NA21092.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/ITU/HG03723/aligned/HG03723.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/ITU/HG03790/aligned/HG03790.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/PJL/HG02651/aligned/HG02651.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/PJL/HG02691/aligned/HG02691.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/PJL/HG03619/aligned/HG03619.bam
+/etc/ace-data/home/rnagaba/reset/data/SAS/STU/HG03672/aligned/HG03672.bam

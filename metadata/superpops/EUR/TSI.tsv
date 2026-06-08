@@ -1,0 +1,6 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+NA20761	female	SAME124363	TSI	Toscani	EUR	European Ancestry	TSI	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA20775	female	SAME124573	TSI	Toscani	EUR	European Ancestry	TSI	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release
+NA20769	female	SAME124371	TSI	Toscani	EUR	European Ancestry	TSI	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA20771	female	SAME124577	TSI	Toscani	EUR	European Ancestry	TSI	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+NA20506	female	SAME124362	TSI	Toscani	EUR	European Ancestry	TSI	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis

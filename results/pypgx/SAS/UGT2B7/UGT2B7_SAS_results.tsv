@@ -1,0 +1,12 @@
+	Genotype	Phenotype	Haplotype1	Haplotype2	AlternativePhase	VariantData	CNV
+HG02651	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.562;	
+HG02691	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+HG03603	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.533;	
+HG03619	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.512;	
+HG03672	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.586;	
+HG03723	*1/*2	Indeterminate	*1;	*2;	;	*2:default;*1:4-69098620-T-C:0.524;	
+HG03790	*1/*2	Indeterminate	*2;	*1;	;	*2:default;*1:4-69098620-T-C:0.488;	
+HG03814	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+NA20864	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	
+NA20900	*1/*1	Indeterminate	*1;	*1;	;	*1:4-69098620-T-C:1.0;	
+NA21092	*2/*2	Indeterminate	*2;	*2;	;	*2:default;	

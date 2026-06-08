@@ -1,0 +1,206 @@
+#!/bin/bash
+# =============================================================================
+# rescue_cyp2d6.sh
+# Annotates and filters CYP2D6 VCFs for AFR and EUR.
+#
+# WHY THIS SCRIPT EXISTS:
+#   The original filter_vcfs.sh lost 2 CYP2D6 variants each in AFR and EUR
+#   because they fell below the quality thresholds (QUAL>=10, DP>=3, MQ>=30).
+#   This script:
+#     1. Annotates the raw CYP2D6 VCFs with VEP (same settings as annotation.sh)
+#     2. Applies RELAXED filters appropriate for CYP2D6 (a difficult gene)
+#     3. Reports exactly what was kept and what was lost and why
+#
+# WHY CYP2D6 IS DIFFICULT:
+#   CYP2D6 sits in a region with CYP2D7 and CYP2D8 pseudogenes directly
+#   adjacent. Reads from CYP2D6 frequently mis-map to these pseudogenes,
+#   causing artificially low MQ scores. The standard MQ>=30 filter is too
+#   strict for this gene. We relax to MQ>=20 here.
+#
+# INPUT FILES:
+#   /etc/ace-data/home/rnagaba/reset/variants/AFR/codeine/CYP2D6/AFR_CYP2D6.vcf.gz
+#   /etc/ace-data/home/rnagaba/reset/variants/EUR/codeine/CYP2D6/EUR_CYP2D6.vcf.gz
+#
+# OUTPUT FILES (in same directory as input):
+#   AFR_CYP2D6.vep.vcf.gz        — VEP annotated
+#   AFR_CYP2D6.analysis.vcf.gz   — annotated + filtered (ready for R)
+#   EUR_CYP2D6.vep.vcf.gz
+#   EUR_CYP2D6.analysis.vcf.gz
+#
+# USAGE:
+#   sbatch rescue_cyp2d6.sh
+#   OR interactively:
+#   bash rescue_cyp2d6.sh
+# =============================================================================
+
+#SBATCH --job-name=rescue_cyp2d6
+#SBATCH --output=logs/rescue_cyp2d6_%A.out
+#SBATCH --error=logs/rescue_cyp2d6_%A.err
+#SBATCH --cpus-per-task=4
+#SBATCH --mem=16G
+
+set -euo pipefail
+mkdir -p logs
+
+# ── Paths (same as your annotation.sh) ──────────────────────────────────────
+CACHE_DIR=/etc/ace-data/home/rnagaba/reset/.vep/cache
+PLUGIN_DIR=/etc/ace-data/home/rnagaba/reset/.vep/plugins
+CLINVAR_VCF=$CACHE_DIR/clinvar/clinvar.vcf.gz
+DBNSFP=$CACHE_DIR/dbNSFP/dbNSFP5.3.1a_grch38.gz
+
+# ── The two CYP2D6 files to rescue ──────────────────────────────────────────
+declare -A CYP2D6_FILES=(
+    ["AFR"]="/etc/ace-data/home/rnagaba/reset/variants/AFR/codeine/CYP2D6/AFR_CYP2D6.vcf.gz"
+    ["EUR"]="/etc/ace-data/home/rnagaba/reset/variants/EUR/codeine/CYP2D6/EUR_CYP2D6.vcf.gz"
+)
+
+# ── Relaxed filter thresholds for CYP2D6 ────────────────────────────────────
+# QUAL >= 5   (relaxed from 10 — CYP2D6 calls are noisier due to pseudogenes)
+# DP   >= 2   (relaxed from 3  — low coverage expected in pseudogene region)
+# MQ   >= 20  (relaxed from 30 — CYP2D6 reads mis-map to CYP2D7/2D8)
+# AC   >= 1   (unchanged       — ALT must be observed at least once)
+FILTER_EXPR='QUAL>=5 & INFO/DP>=2 & INFO/MQ>=20 & INFO/AC>=1'
+
+echo "============================================"
+echo "CYP2D6 Rescue: Annotate + Filter"
+echo "Relaxed filter: $FILTER_EXPR"
+echo "Reason: CYP2D6 pseudogene region causes low MQ"
+echo "============================================"
+
+RESCUE_PASS=0
+RESCUE_FAIL=0
+
+for SP in "${!CYP2D6_FILES[@]}"; do
+
+    INPUT_VCF="${CYP2D6_FILES[$SP]}"
+    DIR=$(dirname "$INPUT_VCF")
+    BASE=$(basename "$INPUT_VCF" .vcf.gz)       # e.g. AFR_CYP2D6
+
+    VEP_OUT="$DIR/${BASE}.vep.vcf.gz"
+    ANALYSIS_OUT="$DIR/${BASE}.analysis.vcf.gz"
+    SUMMARY="$DIR/${BASE}.summary.html"
+    LOG="$DIR/${BASE}.vep.log"
+
+    echo ""
+    echo "--------------------------------------------"
+    echo "Population: $SP"
+    echo "Input:      $INPUT_VCF"
+
+    # ── Check input file exists ──────────────────────────────────────────────
+    if [ ! -s "$INPUT_VCF" ]; then
+        echo "ERROR: File not found or empty: $INPUT_VCF"
+        ((RESCUE_FAIL++)) || true
+        continue
+    fi
+
+    # ── Report what is in the raw file before any filtering ─────────────────
+    N_RAW=$(bcftools view -H "$INPUT_VCF" | wc -l)
+    echo "Raw variants in input: $N_RAW"
+
+    if [ "$N_RAW" -eq 0 ]; then
+        echo "WARNING: No variants in raw file for $SP CYP2D6."
+        echo "This means variants were never called — cannot rescue."
+        echo "Check BAM files and variant calling logs for $SP CYP2D6."
+        ((RESCUE_FAIL++)) || true
+        continue
+    fi
+
+    # ── Show quality values of raw variants before filtering ────────────────
+    echo ""
+    echo "Quality metrics of raw variants (before any filter):"
+    echo "CHROM  POS  QUAL  DP  MQ  AC  FILTER"
+    bcftools query \
+        -f '%CHROM\t%POS\t%QUAL\t%INFO/DP\t%INFO/MQ\t%INFO/AC\t%FILTER\n' \
+        "$INPUT_VCF"
+
+    # ── STEP 1: VEP Annotation ───────────────────────────────────────────────
+    echo ""
+    echo "STEP 1: Running VEP annotation..."
+
+    if ! vep \
+        --cache \
+        --offline \
+        --dir_cache  "$CACHE_DIR" \
+        --dir_plugins "$PLUGIN_DIR" \
+        --species homo_sapiens \
+        --assembly GRCh38 \
+        --vcf \
+        --input_file  "$INPUT_VCF" \
+        --output_file "$VEP_OUT" \
+        --force_overwrite \
+        --plugin LoFtool \
+        --plugin dbNSFP,"$DBNSFP",ALL \
+        --custom "$CLINVAR_VCF",ClinVar,vcf,exact,0,CLNSIG \
+        --fork 4 \
+        --stats_file "$SUMMARY" \
+        2>&1 | tee "$LOG"; then
+        echo "ERROR: VEP annotation failed for $SP — see $LOG"
+        ((RESCUE_FAIL++)) || true
+        continue
+    fi
+
+    echo "VEP annotation complete: $VEP_OUT"
+
+    # ── STEP 2: Relaxed filtering ────────────────────────────────────────────
+    echo ""
+    echo "STEP 2: Applying relaxed filter: $FILTER_EXPR"
+
+    if bcftools filter \
+        -i "$FILTER_EXPR" \
+        "$VEP_OUT" \
+    | bcftools annotate \
+        -x FORMAT/AD,FORMAT/PL \
+        -Oz -o "$ANALYSIS_OUT" \
+    && bcftools index "$ANALYSIS_OUT"; then
+
+        N_VEP=$(bcftools view -H "$VEP_OUT" | wc -l)
+        N_OUT=$(bcftools view -H "$ANALYSIS_OUT" | wc -l)
+        N_LOST=$(( N_RAW - N_OUT ))
+
+        echo ""
+        echo "RESULTS for $SP CYP2D6:"
+        echo "  Raw variants:             $N_RAW"
+        echo "  After VEP (unchanged):    $N_VEP"
+        echo "  After relaxed filter:     $N_OUT"
+        echo "  Variants still excluded:  $N_LOST"
+
+        if [ "$N_OUT" -gt 0 ]; then
+            echo ""
+            echo "Rescued variants (final output):"
+            bcftools query \
+                -f '%CHROM\t%POS\t%REF\t%ALT\tQUAL=%QUAL\tDP=%INFO/DP\tMQ=%INFO/MQ\tAC=%INFO/AC\n' \
+                "$ANALYSIS_OUT"
+            echo ""
+            echo "SUCCESS: $ANALYSIS_OUT is ready for transfer to laptop"
+            ((RESCUE_PASS++)) || true
+        else
+            echo ""
+            echo "WARNING: All $N_RAW variants were still excluded even with relaxed filters."
+            echo "Showing why each raw variant failed even the relaxed thresholds:"
+            bcftools query \
+                -f '%CHROM\t%POS\tQUAL=%QUAL\tDP=%INFO/DP\tMQ=%INFO/MQ\tAC=%INFO/AC\n' \
+                "$INPUT_VCF"
+            echo ""
+            echo "If all variants still fail, the issue is in the original variant calling."
+            echo "Consider re-calling with bcftools mpileup using --min-MQ 0 for CYP2D6."
+            ((RESCUE_FAIL++)) || true
+        fi
+    else
+        echo "ERROR: Filtering step failed for $SP"
+        ((RESCUE_FAIL++)) || true
+    fi
+
+    echo "--------------------------------------------"
+done
+
+# ── Final summary ────────────────────────────────────────────────────────────
+echo ""
+echo "============================================"
+echo "RESCUE SUMMARY"
+echo "  Succeeded: $RESCUE_PASS"
+echo "  Failed:    $RESCUE_FAIL"
+echo ""
+echo "Output files ready for transfer:"
+find /etc/ace-data/home/rnagaba/reset/variants \
+    -path "*/CYP2D6/*.analysis.vcf.gz" | sort
+echo "============================================"

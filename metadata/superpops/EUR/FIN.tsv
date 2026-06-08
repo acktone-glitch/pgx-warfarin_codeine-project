@@ -1,0 +1,6 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG00376	female	SAME124751	FIN	Finnish	EUR	European Ancestry	FIN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00268	female	SAME123574	FIN	Finnish	EUR	European Ancestry	FIN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,Human Genome Structural Variation Consortium, Phase 2,Human Genome Structural Variation Consortium, Phase 3,1KG_ONT_VIENNA,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00380	female	SAME123031	FIN	Finnish	EUR	European Ancestry	FIN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00313	female	SAME124337	FIN	Finnish	EUR	European Ancestry	FIN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis
+HG00324	female	SAME123794	FIN	Finnish	EUR	European Ancestry	FIN	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1KG_ONT_VIENNA,1000 Genomes phase 3 release,1000 Genomes phase 1 release,Geuvadis

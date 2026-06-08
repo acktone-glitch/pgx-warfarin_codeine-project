@@ -1,0 +1,8 @@
+Sample name	Sex	Biosample ID	Population code	Population name	Superpopulation code	Superpopulation name	Population elastic ID	Data collections
+HG02505	female	SAME1839351	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG02339	female	SAME1839288	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG01986	male	SAME1840091	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release
+HG02511	female	SAME1839150	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG02334	male	SAME1839307	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG02323	male	SAME1839440	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,MAGE RNA-seq,1000 Genomes phase 3 release
+HG02419	female	SAME1839244	ACB	African Caribbean	AFR	African Ancestry	ACB	1000 Genomes on GRCh38,1000 Genomes 30x on GRCh38,1000 Genomes phase 3 release

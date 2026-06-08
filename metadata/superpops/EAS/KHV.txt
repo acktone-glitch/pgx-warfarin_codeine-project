@@ -1,0 +1,1 @@
+HG01596	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR047/ERR047699/ERR047699_1.fastq.gz	ftp://ftp.sra.ebi.ac.uk/vol1/fastq/ERR047/ERR047699/ERR047699_2.fastq.gz

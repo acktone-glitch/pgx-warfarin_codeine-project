@@ -1,4 +1,0 @@
-WARNING: Failed to instantiate plugin LoFtool: ERROR: LoFtool scores file /etc/ace-data/home/rnagaba/reset/.vep/plugins//LoFtool_scores.txt not found
-
-WARNING: Failed to instantiate plugin dbNSFP: ERROR: Data file ~/reset/.vep/cache/dbNSFP/dbNSFP5.3.1a_grch38.gz not found
-

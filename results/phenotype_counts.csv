@@ -1,0 +1,38 @@
+Gene,Population,Drug,Phenotype,n,Pct
+CYP2C19,AFR,warfarin,Indeterminate,1,2.0833333333333335
+CYP2C19,AFR,warfarin,Intermediate Metabolizer,16,33.333333333333336
+CYP2C19,AFR,warfarin,Likely Intermediate Metabolizer,1,2.0833333333333335
+CYP2C19,AFR,warfarin,Normal Metabolizer,27,56.25
+CYP2C19,AFR,warfarin,Poor Metabolizer,3,6.25
+CYP2C19,EAS,warfarin,Normal Metabolizer,10,83.33333333333333
+CYP2C19,EAS,warfarin,Poor Metabolizer,2,16.666666666666668
+CYP2C19,EUR,warfarin,Intermediate Metabolizer,7,28
+CYP2C19,EUR,warfarin,Normal Metabolizer,18,72
+CYP2C19,SAS,warfarin,Intermediate Metabolizer,3,27.272727272727273
+CYP2C19,SAS,warfarin,Normal Metabolizer,6,54.54545454545455
+CYP2C19,SAS,warfarin,Poor Metabolizer,2,18.181818181818183
+CYP2C9,AFR,warfarin,Normal Metabolizer,48,100
+CYP2C9,EAS,warfarin,Normal Metabolizer,12,100
+CYP2C9,EUR,warfarin,Normal Metabolizer,25,100
+CYP2C9,SAS,warfarin,Normal Metabolizer,11,100
+CYP2D6,AFR,codeine,Indeterminate,4,8.333333333333334
+CYP2D6,AFR,codeine,Normal Metabolizer,44,91.66666666666667
+CYP2D6,EAS,codeine,Normal Metabolizer,12,100
+CYP2D6,EUR,codeine,Normal Metabolizer,25,100
+CYP2D6,SAS,codeine,Normal Metabolizer,11,100
+CYP4F2,AFR,warfarin,Indeterminate,48,100
+CYP4F2,EAS,warfarin,Indeterminate,12,100
+CYP4F2,EUR,warfarin,Indeterminate,25,100
+CYP4F2,SAS,warfarin,Indeterminate,11,100
+OPRM1,AFR,codeine,Indeterminate,48,100
+OPRM1,EAS,codeine,Indeterminate,12,100
+OPRM1,EUR,codeine,Indeterminate,25,100
+OPRM1,SAS,codeine,Indeterminate,11,100
+UGT2B7,AFR,codeine,Indeterminate,48,100
+UGT2B7,EAS,codeine,Indeterminate,12,100
+UGT2B7,EUR,codeine,Indeterminate,25,100
+UGT2B7,SAS,codeine,Indeterminate,11,100
+VKORC1,AFR,warfarin,Indeterminate,48,100
+VKORC1,EAS,warfarin,Indeterminate,12,100
+VKORC1,EUR,warfarin,Indeterminate,25,100
+VKORC1,SAS,warfarin,Indeterminate,11,100

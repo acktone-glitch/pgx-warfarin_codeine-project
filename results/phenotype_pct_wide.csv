@@ -1,0 +1,13 @@
+Gene,Phenotype,AFR,EAS,EUR,SAS
+CYP2C19,Indeterminate,2.1,0,0,0
+CYP2C19,Intermediate Metabolizer,33.3,0,28,27.3
+CYP2C19,Likely Intermediate Metabolizer,2.1,0,0,0
+CYP2C19,Normal Metabolizer,56.2,83.3,72,54.5
+CYP2C19,Poor Metabolizer,6.2,16.7,0,18.2
+CYP2C9,Normal Metabolizer,100,100,100,100
+CYP2D6,Indeterminate,8.3,0,0,0
+CYP2D6,Normal Metabolizer,91.7,100,100,100
+CYP4F2,Indeterminate,100,100,100,100
+OPRM1,Indeterminate,100,100,100,100
+UGT2B7,Indeterminate,100,100,100,100
+VKORC1,Indeterminate,100,100,100,100
